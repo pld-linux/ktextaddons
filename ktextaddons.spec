@@ -6,12 +6,12 @@
 
 Summary:	Various text handling addons
 Name:		ktextaddons
-Version:	1.5.3
+Version:	1.5.4
 Release:	1
 License:	BSD-3-Clause
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/ktextaddons/%{name}-%{version}.tar.xz
-# Source0-md5:	510e15137f162684ec2f42b41517319c
+# Source0-md5:	0f54cdc35860c7f9d3b6245037bf0b15
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel
 BuildRequires:	Qt6Gui-devel >= 5.15.9
