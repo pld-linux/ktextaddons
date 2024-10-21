@@ -1,10 +1,12 @@
 #
 # Conditional build:
-%bcond_with	tests		# build with tests
+%bcond_with	tests		# test suite
+
 %define		kdeframever	5.105
 %define		qtver		5.15.2
 
 Summary:	Various text handling addons
+Summary(pl.UTF-8):	Różne dodatki do obsługi tekstu
 Name:		ktextaddons
 Version:	1.5.4
 Release:	1
@@ -12,7 +14,7 @@ License:	BSD-3-Clause
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/ktextaddons/%{name}-%{version}.tar.xz
 # Source0-md5:	0f54cdc35860c7f9d3b6245037bf0b15
-URL:		http://www.kde.org/
+URL:		https://kde.org/
 BuildRequires:	Qt6Core-devel
 BuildRequires:	Qt6Gui-devel >= 5.15.9
 BuildRequires:	Qt6Keychain-devel
@@ -38,10 +40,11 @@ BuildRequires:	xz
 Requires:	kf6-dirs
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		qt6dir		%{_libdir}/qt6
-
 %description
 Various text handling addons.
+
+%description -l pl.UTF-8
+Różne dodatki do obsługi tekstu.
 
 %package devel
 Summary:	Header files for %{name} development
@@ -53,7 +56,7 @@ Requires:	Qt6Xml-devel >= %{qtver}
 Requires:	cmake >= 3.16
 
 %description devel
-Header files for %{kfname} development.
+Header files for %{name} development.
 
 %description devel -l pl.UTF-8
 Pliki nagłówkowe dla programistów używających %{name}.
