@@ -217,8 +217,12 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libKF5TextAddonsWidgets.so.*.*.*
 %ghost %{_libdir}/libKF5TextAddonsWidgets.so.1
-%attr(755,root,root) %{_libdir}/libKF5TextAutoCorrection.so.*.*.*
-%ghost %{_libdir}/libKF5TextAutoCorrection.so.1
+%attr(755,root,root) %{_libdir}/libKF5TextAutoCorrectionCore.so.*.*.*
+%ghost %{_libdir}/libKF5TextAutoCorrectionCore.so.1
+%attr(755,root,root) %{_libdir}/libKF5TextAutoCorrectionWidgets.so.*.*.*
+%ghost %{_libdir}/libKF5TextAutoCorrectionWidgets.so.1
+%attr(755,root,root) %{_libdir}/libKF5TextCustomEditor.so.*.*.*
+%ghost %{_libdir}/libKF5TextCustomEditor.so.1
 %attr(755,root,root) %{_libdir}/libKF5TextEditTextToSpeech.so.*.*.*
 %ghost %{_libdir}/libKF5TextEditTextToSpeech.so.1
 %attr(755,root,root) %{_libdir}/libKF5TextEmoticonsCore.so.*.*.*
@@ -229,6 +233,9 @@ rm -rf $RPM_BUILD_ROOT
 %ghost %{_libdir}/libKF5TextGrammarCheck.so.1
 %attr(755,root,root) %{_libdir}/libKF5TextTranslator.so.*.*.*
 %ghost %{_libdir}/libKF5TextTranslator.so.1
+%attr(755,root,root) %{_libdir}/libKF5TextUtils.so.*.*.*
+%ghost %{_libdir}/libKF5TextUtils.so.1
+%attr(755,root,root) %{_libdir}/qt5/plugins/designer/textcustomeditor.so
 %attr(755,root,root) %{_libdir}/qt5/plugins/designer/texttranslatorwidgets5.so
 %dir %{_libdir}/qt5/plugins/kf5/translator
 %attr(755,root,root) %{_libdir}/qt5/plugins/kf5/translator/translator_bing.so
@@ -237,37 +244,41 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/qt5/plugins/kf5/translator/translator_libretranslate.so
 %attr(755,root,root) %{_libdir}/qt5/plugins/kf5/translator/translator_lingva.so
 %attr(755,root,root) %{_libdir}/qt5/plugins/kf5/translator/translator_yandex.so
+%{_datadir}/qlogging-categories5/ktextaddons.categories
+%{_datadir}/qlogging-categories5/ktextaddons.renamecategories
 
 %files -n kf5-ktextaddons-devel
 %defattr(644,root,root,755)
 %{_libdir}/libKF5TextAddonsWidgets.so
-%{_libdir}/libKF5TextAutoCorrection.so
+%{_libdir}/libKF5TextAutoCorrectionCore.so
+%{_libdir}/libKF5TextAutoCorrectionWidgets.so
+%{_libdir}/libKF5TextCustomEditor.so
 %{_libdir}/libKF5TextEditTextToSpeech.so
 %{_libdir}/libKF5TextEmoticonsCore.so
 %{_libdir}/libKF5TextEmoticonsWidgets.so
 %{_libdir}/libKF5TextGrammarCheck.so
 %{_libdir}/libKF5TextTranslator.so
+%{_libdir}/libKF5TextUtils.so
 %{_includedir}/KF5/TextAddonsWidgets
-%{_includedir}/KF5/TextAutoCorrection
+%{_includedir}/KF5/TextAutoCorrectionCore
+%{_includedir}/KF5/TextAutoCorrectionWidgets
+%{_includedir}/KF5/TextCustomEditor
 %{_includedir}/KF5/TextEditTextToSpeech
 %{_includedir}/KF5/TextEmoticonsCore
 %{_includedir}/KF5/TextEmoticonsWidgets
 %{_includedir}/KF5/TextGrammarCheck
 %{_includedir}/KF5/TextTranslator
+%{_includedir}/KF5/TextUtils
 %{_libdir}/cmake/KF5TextAddonsWidgets
-%{_libdir}/cmake/KF5TextAutoCorrection
+%{_libdir}/cmake/KF5TextAutoCorrectionCore
+%{_libdir}/cmake/KF5TextAutoCorrectionWidgets
+%{_libdir}/cmake/KF5TextCustomEditor
 %{_libdir}/cmake/KF5TextEditTextToSpeech
 %{_libdir}/cmake/KF5TextEmoticonsCore
 %{_libdir}/cmake/KF5TextEmoticonsWidgets
 %{_libdir}/cmake/KF5TextGrammarCheck
 %{_libdir}/cmake/KF5TextTranslator
-%{_libdir}/qt5/mkspecs/modules/qt_TextAutoCorrection.pri
-%{_libdir}/qt5/mkspecs/modules/qt_TextEditTextToSpeech.pri
-%{_libdir}/qt5/mkspecs/modules/qt_TextGrammarCheck.pri
-%{_libdir}/qt5/mkspecs/modules/qt_TextTranslator.pri
-%{_libdir}/qt5/mkspecs/modules/qt_textaddonswidgets.pri
-%{_libdir}/qt5/mkspecs/modules/qt_textemoticonscore.pri
-%{_libdir}/qt5/mkspecs/modules/qt_textemoticonswidgets.pri
+%{_libdir}/cmake/KF5TextUtils
 %endif
 
 %if %{with kf6}
