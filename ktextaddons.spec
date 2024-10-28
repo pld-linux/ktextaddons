@@ -14,7 +14,7 @@ Summary:	Various text handling addons
 Summary(pl.UTF-8):	Różne dodatki do obsługi tekstu
 Name:		ktextaddons
 Version:	1.5.4
-Release:	2
+Release:	3
 License:	BSD
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/ktextaddons/%{name}-%{version}.tar.xz
@@ -122,7 +122,7 @@ Group:		X11/Libraries
 Requires:	Qt6Core >= %{qt6_ver}
 Requires:	Qt6Gui >= %{qt6_ver}
 Requires:	Qt6Network >= %{qt6_ver}
-Requires:	Qt6Speech >= %{qt6_ver}
+Requires:	Qt6TextToSpeech >= %{qt6_ver}
 Requires:	Qt6Widgets >= %{qt6_ver}
 Requires:	kf6-dirs
 Requires:	kf6-karchive >= %{kf6_ver}
